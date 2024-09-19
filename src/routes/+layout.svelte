@@ -1,8 +1,13 @@
-<script lang="ts" context="module">
-  import type { Snippet } from 'svelte';
-</script>
-
 <script lang="ts">
-  export let {}: {children: Snippet} = $props()
+  import type { ChildSnippetWrapper } from "$lib/types";
+  import Root from '$lib/components/Root';
+  import ObscuredPageFrame from '$lib'
+  import './base.css';
+
+  const { children }: ChildSnippetWrapper = $props();
 </script>
 
+
+<Root>
+  {@render children()}
+</Root>
