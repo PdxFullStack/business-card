@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ObscuredFrame, Root }  from '$lib'
-  import './base.css';
+  import '../base.css';
 
   const { children } = $props();
 </script>

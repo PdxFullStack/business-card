@@ -25,8 +25,8 @@
 <style>
   .frame__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 32px 1fr 32px;
+    grid-template-rows: 32px 1fr 32px;
     grid-template-areas: 
       "top top top"
       "left center right"
