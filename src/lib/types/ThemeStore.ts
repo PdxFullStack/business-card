@@ -1,4 +1,4 @@
-import { Theme } from "./Theme"
+import type { Theme } from "$lib/types";
 
 export type ThemeStore = {
   get(): Theme;

@@ -1,6 +1,6 @@
 import type { Theme, ThemeStore } from "$lib/types";
 
-class RuneThemeStore {
+class RuneThemeStore implements ThemeStore {
   private theme = $state<Theme>('light');
 
   public get() {

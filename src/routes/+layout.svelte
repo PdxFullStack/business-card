@@ -1,13 +1,13 @@
 <script lang="ts">
-  import type { ChildSnippetWrapper } from "$lib/types";
-  import Root from '$lib/components/Root';
-  import ObscuredPageFrame from '$lib'
+  import { ObscuredFrame, Root }  from '$lib'
   import './base.css';
 
-  const { children }: ChildSnippetWrapper = $props();
+  const { children } = $props();
 </script>
 
 
 <Root>
-  {@render children()}
+  <ObscuredFrame>
+    {@render children()}
+  </ObscuredFrame>
 </Root>

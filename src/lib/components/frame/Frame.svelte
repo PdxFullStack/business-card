@@ -1,29 +1,50 @@
 <script lang="ts">
-  const { children, areasToContent } = $props();
+	import type { Snippet } from "svelte";
+  import type { FrameAreasToSnippet } from "./types";
+
+  type PropsType = {
+    areasToSnippet: FrameAreasToSnippet,
+    children: Snippet,
+  }
+
+  let {areasToSnippet, children}: PropsType = $props();
 </script>
 
-<div id="Frame__Grid">
-  {#each areasToContent as [area, content] }
-    <div class="frame__area--{area}">
+<div class="frame frame__grid">
+  {#each areasToSnippet as [area, content] }
+    <div class="frame__area" style="grid-area: {area};">
       {@render content()}
     </div>
   {/each}
 
   <div class="frame__area--center">
-    
+    {@render children()}
   </div>
 </div>
 
 <style>
-  #Frame__Grid {
-    --frame-bumper-side: minmax(20px, auto)
-
+  .frame__grid {
     display: grid;
-    grid-template-columns: var(--frame-bumper-side) 1fr var(--frame-bumper-side);
-    grid-template-rows: var(--frame-bumper-side) 1fr var(--frame-bumper-side);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
       "top top top"
       "left center right"
       "bottom bottom bottom";
+  }
+
+  .frame {
+    flex: 1;
+    align-self: stretch;
+  }
+
+  .frame__area {
+    display: flex;
+  }
+
+  .frame__area--center {
+    grid-area: center;
+
+    border: 1px solid black;
   }
 </style>

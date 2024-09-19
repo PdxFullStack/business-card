@@ -1,3 +1,3 @@
-import Core from './Core.svelte';
+import Core from './Mask.svelte';
 
 export default Core;
