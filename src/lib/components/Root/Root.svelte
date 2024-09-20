@@ -18,5 +18,8 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    background-color: var(--primary-color);
+    color: var(--primary-contrast-color-accented);
   }
 </style>

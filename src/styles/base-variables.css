@@ -1,3 +1,5 @@
-.root {
-  
+#Root {
+  --font-family: 'Anonymous Pro', sans-serif;
+
+  font-family: var(--font-family);
 }

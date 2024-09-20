@@ -2,6 +2,6 @@
 
 <style>
   div {
-    margin-top: -20px;
+    margin-top: 0;
   }
 </style>

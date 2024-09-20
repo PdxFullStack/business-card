@@ -4,7 +4,7 @@
   .mask {
     flex: 1;
     align-self: stretch;
-    background-color: white;
+    background-color: var(--primary-background-color);
     opacity: .8;
   }
 </style>

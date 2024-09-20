@@ -9,6 +9,6 @@
 <style>
   div {
     grid-area: display;
-    border: 1px solid black;
+    border: 1px solid var(--primary-contrast-color);
   }
 </style>

@@ -1,7 +1,8 @@
 import type { Theme, ThemeStore } from "$lib/types";
+import { themeConfig } from "../../config/theme";
 
 class RuneThemeStore implements ThemeStore {
-  private theme = $state<Theme>('light');
+  private theme = $state<Theme>(themeConfig.default);
 
   public get() {
     return this.theme;
