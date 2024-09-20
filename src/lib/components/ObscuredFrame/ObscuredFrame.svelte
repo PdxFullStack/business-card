@@ -1,13 +1,13 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
   import Frame from '$lib/components/Frame';
-	import { createObscuredSnippetsForFrameAreas } from "./createObscuredSnippetsForFrameAreas";
+	import { createMasksForVerticalBorderAreas } from "./createMasksForVerticalBorderAreas";
 
   let {children}: {children: Snippet} = $props();
 
-  const frameAreasObscuredSnippits = createObscuredSnippetsForFrameAreas();
+  const frameAreasObscuredSnippits = createMasksForVerticalBorderAreas();
 </script>
 
-<Frame areasToSnippet={frameAreasObscuredSnippits}>
+<Frame borderAreaToContent={frameAreasObscuredSnippits}>
   {@render children()}
 </Frame>

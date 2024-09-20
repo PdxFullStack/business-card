@@ -1,16 +1,20 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
-  import type { FrameAreasToSnippet } from "./types";
+  import type { ModuleProps } from "./types";
+  import Border from "./Border.svelte";
+  import DisplayCase from "./DisplayCase.svelte";
+  import Grid from "./Grid.svelte";
 
-  type PropsType = {
-    areasToSnippet: FrameAreasToSnippet,
-    children: Snippet,
-  }
-
-  let {areasToSnippet, children}: PropsType = $props();
+  let {borderAreaToContent, children}: ModuleProps = $props();
 </script>
 
-<div class="frame frame__grid">
+<Grid>
+  <Border areaToContent={borderAreaToContent} />
+  <DisplayCase>
+    {@render children()}
+  </DisplayCase>
+</Grid>
+
+<!-- <div class="frame frame__grid">
   {#each areasToSnippet as [area, content] }
     <div class="frame__area" style="grid-area: {area};">
       {@render content()}
@@ -20,9 +24,9 @@
   <div class="frame__area--center">
     {@render children()}
   </div>
-</div>
+</div> -->
 
-<style>
+<!-- <style>
   .frame__grid {
     display: grid;
     grid-template-columns: 32px 1fr 32px;
@@ -47,4 +51,4 @@
 
     border: 1px solid black;
   }
-</style>
+</style> -->
