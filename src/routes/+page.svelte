@@ -1,5 +1,5 @@
 <script>
-  import Card from "$lib/components/BusinessCard";
+  import CardContents from "$lib/components/CardContents";
 </script>
 
-<Card></Card>
+<CardContents></CardContents>

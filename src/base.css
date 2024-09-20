@@ -1,8 +1,5 @@
 @import url('./styles/fonts.css');
+@import url('./styles/base-variables.css');
+@import url('./styles/theme-variables.css');
 
 @import url('./styles//html-tags.css');
-
-
-body {
-  margin: 0;
-}

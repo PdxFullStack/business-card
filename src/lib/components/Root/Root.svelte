@@ -5,12 +5,12 @@
   let {children}: {children: Snippet} = $props();
 </script>
 
-<div data-theme={themeStore.get()}>
+<div id="Root" data-theme={themeStore.get()}>
   {@render children()}
 </div>
 
 <style>
-  div {
+  #Root {
     display: flex;
 
     position: fixed;

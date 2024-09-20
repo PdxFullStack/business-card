@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ObscuredFrame, Root }  from '$lib'
+  import { VerticallyMaskedFrame, Root }  from '$lib'
   import '../base.css';
 
   const { children } = $props();
@@ -7,7 +7,7 @@
 
 
 <Root>
-  <ObscuredFrame>
+  <VerticallyMaskedFrame>
     {@render children()}
-  </ObscuredFrame>
+  </VerticallyMaskedFrame>
 </Root>
