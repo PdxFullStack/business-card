@@ -1,8 +1,8 @@
 <script lang="ts">
   import { themeStore } from "$lib/stores/themeStore.svelte";
-	import type { Snippet } from "svelte";
+  import type {WithRenderableChildren} from '$lib/types';
 
-  let {children}: {children: Snippet} = $props();
+  let {children}: WithRenderableChildren = $props();
 </script>
 
 <div id="Root" data-theme={themeStore.get()}>

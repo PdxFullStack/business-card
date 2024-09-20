@@ -8,6 +8,6 @@
   const frameAreasObscuredSnippits = createMasksForVerticalBorderAreas();
 </script>
 
-<Frame borderAreaToContent={frameAreasObscuredSnippits}>
+<Frame borderAreasToContent={frameAreasObscuredSnippits}>
   {@render children()}
 </Frame>

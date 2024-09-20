@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type {Snippet} from 'svelte';
+	import type { WithRenderableChildren } from "$lib/types";
 
-  let {children}: {children: Snippet} = $props();
+  let {children}: WithRenderableChildren = $props();
 </script>
 
 <div>{@render children()}</div>

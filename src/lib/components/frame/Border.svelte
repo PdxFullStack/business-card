@@ -1,11 +1,7 @@
 <script lang="ts">
 	import type { FrameBorderAreasToContent } from './types.ts';
 
-  type PropsType = {
-    areaToContent: FrameBorderAreasToContent
-  }
-
-  let {areaToContent}: PropsType = $props();
+  let {areaToContent}: {areaToContent: FrameBorderAreasToContent} = $props();
 </script>
 
 {#each areaToContent as [area, content]}
