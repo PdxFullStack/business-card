@@ -1,25 +1,30 @@
 <script lang="ts">
-  import type {WithRenderableChildren} from '$lib/types';
-	import type { OptionValue } from './types';
+	import type { OptionValue } from "./types";
 
   type ComponentProps = {
-    currValue: OptionValue,
-    groupName: string,
-    onSelect: (value: OptionValue) => void,
-    value: OptionValue,
+    checked: boolean;
+    groupName: string;
+    label: string;
+    onSelect: (value: OptionValue) => void;
+    value: OptionValue;
   };
-  type Props = ComponentProps & WithRenderableChildren;
+  type Props = ComponentProps;
 
-  let {children, currValue, groupName, onSelect, value}: Props = $props();
+  let {checked, groupName, label, onSelect, value}: Props = $props();
 </script>
 
 <input
-  checked={currValue === value}
+  checked={checked}
   name={groupName}
   onclick={() => onSelect(value)}
   type="radio"
-  value={value.toString()}
 />
 <label for={value.toString()}>
-  {@render children()}
+  {label}
 </label>
+
+<style>
+  input {
+    border-radius: 0;
+  }
+</style>

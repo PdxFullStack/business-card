@@ -1,5 +1,5 @@
 <script>
-  import CardContents from "$lib/components/CardContents";
+  import { CardContents } from "$lib";
 </script>
 
-<CardContents></CardContents>
+<CardContents></CardContents> 

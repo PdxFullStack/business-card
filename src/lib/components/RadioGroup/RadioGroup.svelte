@@ -1,28 +1,26 @@
-<script lang="ts">
-  import type { WithRenderableChildren } from '$lib/types';
+<script lang="ts" generics="T">
   import type { OptionDto, OptionValue } from './types';
 
-  type ComponentProps = {initialValue: OptionValue, options: OptionDto[]};
-  type Props = ComponentProps & WithRenderableChildren
+  type Props = {
+    onSelect: (value: T) => void,
+    options: OptionDto[],
+    value: OptionValue,
+  };
 
   import Group from './Group.svelte';
   import Option from './Option.svelte';
-	import StateManager from './StateManager';
 
-  let {initialValue, options}: Props = $props();
-
-  const stateManager = new StateManager({value: initialValue});
+  let {onSelect, options, value}: Props = $props();
 </script>
 
 <Group>
-  {#each options as {display, value}}
+  {#each options as option}
     <Option
-      currValue={stateManager.value}
+      checked={value.toString() === option.value.toString()}
       groupName="grp"
-      onSelect={stateManager.onSelect}
-      value={value}
-    >
-      {@render display()}
-    </Option>
+      label={option.label}
+      onSelect={(optionValue) => onSelect(optionValue as T)}
+      value={option.value}
+    />
   {/each}
 </Group>

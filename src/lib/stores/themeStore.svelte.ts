@@ -1,16 +1,17 @@
 import type { Theme, ThemeStore } from "$lib/types";
 import { themeConfig } from "../../config/theme";
 
-class RuneThemeStore implements ThemeStore {
-  private theme = $state(themeConfig.default);
+function createRuneThemeStore(): ThemeStore {
+  let theme = $state(themeConfig.default);
 
-  public get() {
-    return this.theme;
-  }
-
-  public set(theme: Theme) {
-    this.theme = theme;
-  }
+  return {
+    get theme() {
+      return theme;
+    },
+    select(selectedTheme: Theme) {
+      theme = selectedTheme;
+    },
+  };
 }
 
-export const themeStore: ThemeStore = new RuneThemeStore();
+export const themeStore: ThemeStore = createRuneThemeStore();

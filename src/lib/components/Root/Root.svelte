@@ -1,11 +1,14 @@
 <script lang="ts">
-  import { themeStore } from "$lib/stores/themeStore.svelte";
   import type {WithRenderableChildren} from '$lib/types';
+  import { themeStore } from "$lib/stores/themeStore.svelte";
 
   let {children}: WithRenderableChildren = $props();
 </script>
 
-<div id="Root" data-theme={themeStore.get()}>
+<div
+  id="Root"
+  data-theme={themeStore.theme}
+>
   {@render children()}
 </div>
 

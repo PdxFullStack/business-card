@@ -1,6 +1,13 @@
 <script lang="ts">
-  import type {WithRenderableChildren} from '$lib/types';
+  import RadioGroup from "$lib/components/RadioGroup";
+  import { themeStore } from "$lib/stores/themeStore.svelte";
+  import { createOptions } from "./createOptions";
 
-  let {children}: WithRenderableChildren = $props();
+  const options = createOptions();
 </script>
 
+<RadioGroup
+  onSelect={themeStore.select}
+  options={options}
+  value={themeStore.theme}
+/>

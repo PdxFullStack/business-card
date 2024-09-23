@@ -1,7 +1,5 @@
-import type {Renderable} from '$lib/types';
-
 export type OptionValue = { toString: () => string };
 export type OptionDto = {
-  display: Renderable;
+  label: string;
   value: OptionValue;
 };
