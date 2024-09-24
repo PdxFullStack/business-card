@@ -7,6 +7,7 @@
 </script>
 
 <RadioGroup
+  name="theme-selector"
   onSelect={themeStore.select}
   options={options}
   value={themeStore.theme}

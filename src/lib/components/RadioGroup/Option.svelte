@@ -1,30 +1,40 @@
 <script lang="ts">
-	import type { OptionValue } from "./types";
-
   type ComponentProps = {
     checked: boolean;
     groupName: string;
+    id: string;
     label: string;
-    onSelect: (value: OptionValue) => void;
-    value: OptionValue;
+    onSelect: () => void;
   };
   type Props = ComponentProps;
 
-  let {checked, groupName, label, onSelect, value}: Props = $props();
+  let {checked, groupName, id, label, onSelect}: Props = $props();
 </script>
 
 <input
+  class="radio-group__option"
   checked={checked}
+  id={id}
   name={groupName}
-  onclick={() => onSelect(value)}
+  onclick={() => onSelect()}
   type="radio"
 />
-<label for={value.toString()}>
+<label for={id}>
   {label}
 </label>
 
 <style>
-  input {
-    border-radius: 0;
+  .radio-group__option {
+    height: var(--spacing-md);
+    width: var(--spacing-md);
+
+    border: var(--primary-border);
+  }
+
+  .radio-group__option:checked {
+    height: var(--spacing-md);
+    width: var(--spacing-md);
+
+    background-color: var(--primary-contrast-color);
   }
 </style>

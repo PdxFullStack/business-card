@@ -1,0 +1,19 @@
+
+#Root[data-theme="dark"] {
+
+  --primary-color-values: 12, 12, 12;
+  --primary-color: rgb(var(--primary-color-values));
+  --primary-color-accented: rgba(
+    var(--primary-dark-values), 
+    var(--primary-accenting-ratio)
+  );
+
+  --primary-contrast-color-values: 235, 235, 235;
+  --primary-contrast-color: rgb(var(--primary-contrast-color-values));
+  --primary-contrast-color-accented: rgba(
+    var(--primary-contrast-color-values),
+    var(--primary-accenting-ratio)
+  );
+  
+  --primary-border: 1px solid var(--primary-contrast-color);
+}

@@ -22,7 +22,11 @@
     bottom: 0;
     left: 0;
 
+    font-family: var(--font-family);
+
     background-color: var(--primary-color);
     color: var(--primary-contrast-color-accented);
+
+    transition: var(--transition-theme);
   }
 </style>

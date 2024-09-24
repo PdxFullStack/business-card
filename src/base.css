@@ -1,5 +1,9 @@
-@import url('./styles/fonts.css');
-@import url('./styles/base-variables.css');
-@import url('./styles/theme-variables.css');
+@import url('./styles/variables/font.css');
+@import url('./styles/variables/spacing.css');
+@import url('./styles/variables/transitions.css');
 
-@import url('./styles//html-tags.css');
+@import url('./styles/variables/theme/dark.css');
+@import url('./styles/variables/theme/light.css');
+
+@import url('./styles/font-faces.css');
+@import url('./styles//html-native-elements.css');

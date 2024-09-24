@@ -12,3 +12,8 @@ fieldset {
   border: none;
   min-inline-size: min-content;
 }
+
+input[type="radio"] {
+  appearance: none;
+  margin: 0;
+}
