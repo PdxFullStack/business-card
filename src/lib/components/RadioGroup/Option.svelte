@@ -11,20 +11,28 @@
   let {checked, groupName, id, label, onSelect}: Props = $props();
 </script>
 
-<input
-  class="radio-group__option"
-  checked={checked}
-  id={id}
-  name={groupName}
-  onclick={onSelect}
-  type="radio"
-/>
-<label for={id}>
-  {label}
-</label>
+<div class="option">
+  <input
+    class="option__input"
+    checked={checked}
+    id={id}
+    name={groupName}
+    onclick={onSelect}
+    type="radio"
+  />
+  <label for={id}>
+    {label}
+  </label>
+</div>
 
 <style>
-  .radio-group__option {
+  .option {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm)
+  }
+
+  .option__input {
     height: var(--spacing-md);
     width: var(--spacing-md);
 
@@ -33,14 +41,14 @@
     transition: var(theme-transition);
   }
 
-  .radio-group__option:checked {
+  .option__input:checked {
     height: var(--spacing-md);
     width: var(--spacing-md);
 
     background-color: var(--primary-contrast-color);
   }
 
-  .radio-group__option:focus-visible {
+  .option__input:focus-visible {
     outline: none;  
     box-shadow:
       inset 0 0 0 1px var(--primary-color),

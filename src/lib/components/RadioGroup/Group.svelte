@@ -15,6 +15,6 @@
     display: flex;
     flex-direction: inherit;
     align-items: center;
-    gap: var(--spacing-sm)
+    gap: var(--spacing-md)
   }
 </style>

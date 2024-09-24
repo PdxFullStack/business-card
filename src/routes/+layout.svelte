@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { VerticallyMaskedFrame, Root }  from '$lib'
+  import { FrameWithMasksAndThemeSelect, Root }  from '$lib'
   import '../base.css';
 
   const { children } = $props();
@@ -7,7 +7,7 @@
 
 
 <Root>
-  <VerticallyMaskedFrame>
+  <FrameWithMasksAndThemeSelect>
     {@render children()}
-  </VerticallyMaskedFrame>
+  </FrameWithMasksAndThemeSelect>
 </Root>
