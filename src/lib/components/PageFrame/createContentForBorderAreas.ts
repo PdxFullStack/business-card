@@ -1,5 +1,7 @@
-import type { FrameBorderAreasToContent } from "../Frame/types";
+import type { FrameBorderAreasToContent } from "$lib/components/Frame/types";
+
 import Mask from '$lib/components/Mask';
+import ThemeSelector from "$lib/components/ThemeSelector";
 
 
 export function createMasksForVerticalBorderAreas(): FrameBorderAreasToContent {
@@ -7,6 +9,7 @@ export function createMasksForVerticalBorderAreas(): FrameBorderAreasToContent {
 
   map.set('top', Mask);
   map.set('bottom', Mask);
+  map.set('left', ThemeSelector);
 
   return map;
 }

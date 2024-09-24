@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
   import Frame from '$lib/components/Frame';
-	import { createMasksForVerticalBorderAreas } from "./createMasksForVerticalBorderAreas";
+	import { createMasksForVerticalBorderAreas } from "./createContentForBorderAreas";
 
   let {children}: {children: Snippet} = $props();
 

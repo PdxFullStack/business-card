@@ -10,9 +10,11 @@
 
 <style>
   fieldset {
+    flex: auto;
+
     display: flex;
     flex-direction: inherit;
-
-    flex: auto;
+    align-items: center;
+    gap: var(--spacing-sm)
   }
 </style>

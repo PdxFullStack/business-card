@@ -16,7 +16,7 @@
   checked={checked}
   id={id}
   name={groupName}
-  onclick={() => onSelect()}
+  onclick={onSelect}
   type="radio"
 />
 <label for={id}>
@@ -29,6 +29,8 @@
     width: var(--spacing-md);
 
     border: var(--primary-border);
+
+    transition: var(theme-transition);
   }
 
   .radio-group__option:checked {
@@ -36,5 +38,12 @@
     width: var(--spacing-md);
 
     background-color: var(--primary-contrast-color);
+  }
+
+  .radio-group__option:focus-visible {
+    outline: none;  
+    box-shadow:
+      inset 0 0 0 1px var(--primary-color),
+      inset 0 0 0 2px var(--primary-contrast-color);
   }
 </style>

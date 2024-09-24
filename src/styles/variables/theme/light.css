@@ -5,15 +5,18 @@
   --primary-color: rgb(var(--primary-color-values));
   --primary-color-accented: rgba(
     var(--primary-dark-values), 
-    var(--primary-accenting-ratio)
+    .8
   );
 
   --primary-contrast-color-values: 12, 12, 12;
   --primary-contrast-color: rgb(var(--primary-contrast-color-values));
   --primary-contrast-color-accented: rgba(
     var(--primary-contrast-color-values),
-    var(--primary-accenting-ratio)
+    .8
   );
   
   --primary-border: 1px solid var(--primary-contrast-color);
+
+  --test-focus-1: white;
+  --test-focus-2: black;
 }
