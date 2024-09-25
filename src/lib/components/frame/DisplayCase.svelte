@@ -4,7 +4,7 @@
   let {children}: WithRenderableChildren = $props();
 </script>
 
-<div>{@render children()}</div>
+<div role="main">{@render children()}</div>
 
 <style>
   div {

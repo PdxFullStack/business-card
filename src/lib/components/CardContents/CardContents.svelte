@@ -1,2 +1,12 @@
+<script lang="ts">
+	import About from './About.svelte';
+  import Layout from './Layout.svelte';
+  import Links from './Links/Links.svelte';
+</script>
 
-<div>Business Card</div>
+<Layout>
+  <About />
+  <Links />
+</Layout>
+
+

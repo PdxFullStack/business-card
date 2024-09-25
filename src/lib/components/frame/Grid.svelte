@@ -11,8 +11,8 @@
 <style>
   .frame__grid {
     display: grid;
-    grid-template-columns: minmax(20px, 4vh) 1fr minmax(20px, 4vh);
-    grid-template-rows: minmax(20px, 4vh) 1fr minmax(20px, 4vh);
+    grid-template-columns: minmax(20px, 2.5vw) 1fr minmax(20px, 2.5vw);
+    grid-template-rows: minmax(20px, 2.5vw) 1fr minmax(20px, 2.5vw);
     grid-template-areas: 
       /* Keep this set of areas synced with FrameBorderAreas in types.ts */
       "top top top"
