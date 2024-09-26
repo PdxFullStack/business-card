@@ -1,4 +1,4 @@
-import { createTabGroup } from "$lib/util/createTabGroup/createTabGroup.svelte";
+import createTabGroup from "$lib/util/createTabGroup";
 
 type TabNavFacilitator = {
   registerGroup: (groupEl: HTMLElement) => void;

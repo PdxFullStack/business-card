@@ -27,6 +27,10 @@
   .about__header {
     font-size: var(--font-size-xxxl);
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-xxl);
+    }
   }
 
   .about__subheader {
@@ -34,6 +38,10 @@
     text-transform: capitalize;
 
     margin-top: var(--spacing-sm);
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-lg);
+    }
   }
 
   .about__description {
@@ -41,5 +49,9 @@
     text-transform: lowercase ;
 
     margin-top: var(--spacing-md);
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-lg);
+    }
   }
 </style>

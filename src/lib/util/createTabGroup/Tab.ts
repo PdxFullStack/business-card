@@ -12,6 +12,7 @@ export class Tab {
   constructor({onFocus, root}: Props) {
     this.onFocus = onFocus;
     this.root = root;
+    this.unfocus();
 
     this.setup();
   }
@@ -24,8 +25,12 @@ export class Tab {
     this.root.removeEventListener('focus', () => this.onFocus);
   }
 
-  focus(): void {
+  makeFocusable(): void {
     this.root.setAttribute('tabindex', '0');
+  }
+
+  focus(): void {
+    this.makeFocusable();
     this.root.focus();
   }
 

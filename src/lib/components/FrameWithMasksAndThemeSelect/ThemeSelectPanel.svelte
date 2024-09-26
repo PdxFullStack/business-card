@@ -21,10 +21,14 @@
     position: absolute;
     bottom: var(--spacing-md);
     right: var(--spacing-xs);
-
     
     translate: 100% 0;
     transform: rotate(-90deg);
     transform-origin: left bottom;
+
+
+    @media (max-width: 768px) {
+      right: var(--spacing-xxs);
+    }
   }
 </style>

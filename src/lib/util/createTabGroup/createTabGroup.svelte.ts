@@ -53,10 +53,12 @@ export function createTabGroup(groupEl: HTMLElement, tabEls: HTMLElement[]) {
   };
 
   const setActive = (next: number, prev: number) => {
-    if (prev > -1) {
-      tabs[prev].unfocus();
+    if (prev === -1) {
+      tabs[next].makeFocusable();
+      return;
     }
 
+    tabs[prev].unfocus();
     tabs[next].focus();
   };
 

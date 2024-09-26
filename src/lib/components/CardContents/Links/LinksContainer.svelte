@@ -32,5 +32,9 @@
     align-items: flex-end;
     gap: var(--spacing-md);
     justify-content: center;
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+    }
   }
 </style>
