@@ -1,3 +1,3 @@
 export type ElementRegisterer = {
-  registerElement: (element: HTMLElement) => void; 
+	registerElement: (element: HTMLElement) => void;
 };

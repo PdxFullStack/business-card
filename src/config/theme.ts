@@ -1,9 +1,9 @@
-import type { Theme } from "$lib/types";
+import type { Theme } from '$lib/types';
 
 type ThemeConfig = {
-  default: Theme;
-}
+	default: Theme;
+};
 
 export const themeConfig: ThemeConfig = {
-  default: 'light',
-}
+	default: 'light'
+};

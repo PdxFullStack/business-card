@@ -1,3 +1,3 @@
-import RadioGroup from "./RadioGroup.svelte";
+import RadioGroup from './RadioGroup.svelte';
 
 export default RadioGroup;

@@ -1,5 +1,5 @@
 export type PersonalInfoLinks = {
-  emailAddress: string;
-  githubSubdomain: string;
-  linkedInSubdomain: string;
-}
+	emailAddress: string;
+	githubSubdomain: string;
+	linkedInSubdomain: string;
+};

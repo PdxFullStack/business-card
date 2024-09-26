@@ -1,5 +1,5 @@
-import type { Renderable } from "./Renderable";
+import type { Renderable } from './Renderable';
 
 export type WithRenderableChildren = {
-  children: Renderable;
+	children: Renderable;
 };

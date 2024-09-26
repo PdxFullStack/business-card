@@ -1,44 +1,42 @@
-import type { Cursor } from "./createCursorFromLength.svelte";
-
 type Props = {
-  onFocus: () => void;
-  root: HTMLElement;
-}
+	onFocus: () => void;
+	root: HTMLElement;
+};
 
 export class Tab {
-  private onFocus: () => void;
-  private root: HTMLElement;
+	private onFocus: () => void;
+	private root: HTMLElement;
 
-  constructor({onFocus, root}: Props) {
-    this.onFocus = onFocus;
-    this.root = root;
-    this.unfocus();
+	constructor({ onFocus, root }: Props) {
+		this.onFocus = onFocus;
+		this.root = root;
+		this.unfocus();
 
-    this.setup();
-  }
+		this.setup();
+	}
 
-  is(reference: Node): boolean {
-    return this.root === reference;
-  }
+	is(reference: Node): boolean {
+		return this.root === reference;
+	}
 
-  cleanup(): void {
-    this.root.removeEventListener('focus', () => this.onFocus);
-  }
+	cleanup(): void {
+		this.root.removeEventListener('focus', () => this.onFocus);
+	}
 
-  makeFocusable(): void {
-    this.root.setAttribute('tabindex', '0');
-  }
+	makeFocusable(): void {
+		this.root.setAttribute('tabindex', '0');
+	}
 
-  focus(): void {
-    this.makeFocusable();
-    this.root.focus();
-  }
+	focus(): void {
+		this.makeFocusable();
+		this.root.focus();
+	}
 
-  unfocus(): void {
-    this.root.setAttribute('tabindex', '-1');
-  }
+	unfocus(): void {
+		this.root.setAttribute('tabindex', '-1');
+	}
 
-  private setup(): void {
-    this.root.addEventListener('focus', () => this.onFocus);
-  }
+	private setup(): void {
+		this.root.addEventListener('focus', () => this.onFocus);
+	}
 }

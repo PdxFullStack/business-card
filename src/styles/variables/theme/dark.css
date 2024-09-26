@@ -1,22 +1,14 @@
+#Root[data-theme='dark'] {
+	--primary-color-values: 12, 12, 12;
+	--primary-color: rgb(var(--primary-color-values));
+	--primary-color-accented: rgba(var(--primary-dark-values), 0.8);
 
-#Root[data-theme="dark"] {
+	--primary-contrast-color-values: 235, 235, 235;
+	--primary-contrast-color: rgb(var(--primary-contrast-color-values));
+	--primary-contrast-color-accented: rgba(var(--primary-contrast-color-values), 0.8);
 
-  --primary-color-values: 12, 12, 12;
-  --primary-color: rgb(var(--primary-color-values));
-  --primary-color-accented: rgba(
-    var(--primary-dark-values), 
-    .8
-  );
+	--primary-border: 1px solid var(--primary-contrast-color);
 
-  --primary-contrast-color-values: 235, 235, 235;
-  --primary-contrast-color: rgb(var(--primary-contrast-color-values));
-  --primary-contrast-color-accented: rgba(
-    var(--primary-contrast-color-values),
-    .8
-  );
-  
-  --primary-border: 1px solid var(--primary-contrast-color);
-
-  --test-focus-1: black;
-  --test-focus-2: white;
+	--test-focus-1: black;
+	--test-focus-2: white;
 }

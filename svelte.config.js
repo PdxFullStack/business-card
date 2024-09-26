@@ -14,7 +14,7 @@ const config = {
 		vitePreprocess(),
 		sveltePreprocess({
 			less: true,
-			sourceMap: true,
+			sourceMap: true
 		})
 	],
 

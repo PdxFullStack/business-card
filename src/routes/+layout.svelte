@@ -1,13 +1,12 @@
 <script lang="ts">
-  import { FrameWithMasksAndThemeSelect, Root }  from '$lib'
-  import '../base.css';
+	import { FrameWithMasksAndThemeSelect, Root } from '$lib';
+	import '../base.css';
 
-  const { children } = $props();
+	const { children } = $props();
 </script>
 
-
 <Root>
-  <FrameWithMasksAndThemeSelect>
-    {@render children()}
-  </FrameWithMasksAndThemeSelect>
+	<FrameWithMasksAndThemeSelect>
+		{@render children()}
+	</FrameWithMasksAndThemeSelect>
 </Root>

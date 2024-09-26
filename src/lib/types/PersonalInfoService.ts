@@ -1,5 +1,5 @@
-import type { PersonalInfo } from "./PersonalInfo"
+import type { PersonalInfo } from './PersonalInfo';
 
 export type PersonalInfoService = {
-  get(): PersonalInfo;
-}
+	get(): PersonalInfo;
+};

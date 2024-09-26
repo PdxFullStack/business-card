@@ -1,6 +1,6 @@
-import type { Theme } from "$lib/types";
+import type { Theme } from '$lib/types';
 
 export type ThemeStore = {
-  theme: Theme;
-  select(theme: Theme): void;
-}
+	theme: Theme;
+	select(theme: Theme): void;
+};

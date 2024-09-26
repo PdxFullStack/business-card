@@ -1,19 +1,13 @@
-
 <script lang="ts">
-  import type {ElementRegisterer} from './types'
+	import type { ElementRegisterer } from './types';
 
-  type Props = ElementRegisterer & {
-    subdomain: string;
-  };
+	type Props = ElementRegisterer & {
+		subdomain: string;
+	};
 
-  import Link from "./Link.svelte";
+	import Link from './Link.svelte';
 
-  const {registerElement, subdomain}: Props = $props();
+	const { registerElement, subdomain }: Props = $props();
 </script>
 
-
-<Link
-  href={'https://linkedin.com' + subdomain}
-  label='LinkedIn'
-  {registerElement}
-/>
+<Link href={'https://linkedin.com' + subdomain} label="LinkedIn" {registerElement} />

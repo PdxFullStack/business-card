@@ -1,3 +1,3 @@
-import {createTabGroup} from "./createTabGroup.svelte";
+import { createTabGroup } from './createTabGroup.svelte';
 
 export default createTabGroup;

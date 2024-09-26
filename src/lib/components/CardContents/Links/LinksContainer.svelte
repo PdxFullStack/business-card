@@ -1,40 +1,36 @@
-
 <script lang="ts">
-  import type {WithRenderableChildren} from '$lib/types';
+	import type { WithRenderableChildren } from '$lib/types';
 	import { onMount } from 'svelte';
 	import type { ElementRegisterer } from './types';
 
-  type Props = WithRenderableChildren & ElementRegisterer;
+	type Props = WithRenderableChildren & ElementRegisterer;
 
-  let {registerElement, children}: Props = $props();
+	let { registerElement, children }: Props = $props();
 
-  let containerRef: HTMLUListElement;
+	let containerRef: HTMLUListElement;
 
-  onMount(() => {
-    registerElement(containerRef);
-  });
+	onMount(() => {
+		registerElement(containerRef);
+	});
 </script>
 
-<ul
-  class="links-container"
-  bind:this={containerRef}
->
-  {@render children()}
+<ul class="links-container" bind:this={containerRef}>
+	{@render children()}
 </ul>
 
 <style>
-  .links-container {
-    grid-area: links;
+	.links-container {
+		grid-area: links;
 
-    display: flex;
-    flex-direction: column;
+		display: flex;
+		flex-direction: column;
 
-    align-items: flex-end;
-    gap: var(--spacing-md);
-    justify-content: center;
+		align-items: flex-end;
+		gap: var(--spacing-md);
+		justify-content: center;
 
-    @media (max-width: 768px) {
-      align-items: flex-start;
-    }
-  }
+		@media (max-width: 768px) {
+			align-items: flex-start;
+		}
+	}
 </style>

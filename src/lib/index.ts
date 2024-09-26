@@ -3,8 +3,4 @@ import CardContents from '$lib/components/CardContents';
 import FrameWithMasksAndThemeSelect from '$lib/components/FrameWithMasksAndThemeSelect';
 import Root from '$lib/components/Root';
 
-export {
-  CardContents,
-  FrameWithMasksAndThemeSelect,
-  Root,
-}
+export { CardContents, FrameWithMasksAndThemeSelect, Root };

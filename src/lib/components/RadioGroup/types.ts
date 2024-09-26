@@ -1,5 +1,5 @@
-export type OptionValue = { toString: () => string };
-export type OptionDto = {
-  label: string;
-  value: OptionValue;
+export type OptionValue<T> = T & { toString: () => string };
+export type OptionDto<T> = {
+	label: string;
+	value: OptionValue<T>;
 };

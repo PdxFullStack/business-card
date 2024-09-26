@@ -1,3 +1,3 @@
-import ThemeSelector from "./ThemeSelector.svelte";
+import ThemeSelector from './ThemeSelector.svelte';
 
 export default ThemeSelector;
