@@ -1,26 +1,49 @@
 
 <script lang="ts">
-  type Props = {
+	import { onMount } from "svelte";
+	import type { ElementRegisterer } from "./types";
+
+  type Props = ElementRegisterer & {
     href: string;
     label: string;
   };
 
-  let {href, label}: Props = $props();
+  let {href, label, registerElement}: Props = $props();
+
+  let anchorRef: HTMLAnchorElement;
+
+  onMount(() => {
+    registerElement(anchorRef);
+  });
 </script>
 
 
-<li>
+<li class="link">
   <a
+    class="link__anchor"
     {href}
     target="_blank"
+    bind:this={anchorRef}
   >
     {label}
   </a>
 </li>
 
 
-<style>
-  .link {
+<style lang="less">
+  @import '$lib/mixins/focused.less';
 
+  .link {
+   
   }
+
+  .link__anchor {
+    color: var(--primary-contrast-color);
+
+    &:focus-visible {
+      .focused(); 
+    }
+  }
+
+
 </style>

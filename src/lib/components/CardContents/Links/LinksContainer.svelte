@@ -1,11 +1,24 @@
 
 <script lang="ts">
   import type {WithRenderableChildren} from '$lib/types';
+	import { onMount } from 'svelte';
+	import type { ElementRegisterer } from './types';
 
-  let {children}: WithRenderableChildren = $props();
+  type Props = WithRenderableChildren & ElementRegisterer;
+
+  let {registerElement, children}: Props = $props();
+
+  let containerRef: HTMLUListElement;
+
+  onMount(() => {
+    registerElement(containerRef);
+  });
 </script>
 
-<ul class="links-container">
+<ul
+  class="links-container"
+  bind:this={containerRef}
+>
   {@render children()}
 </ul>
 

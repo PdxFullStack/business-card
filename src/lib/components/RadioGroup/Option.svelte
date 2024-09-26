@@ -25,33 +25,30 @@
   </label>
 </div>
 
-<style>
+<style lang="less">
+  @import '$lib/mixins/focused.less';
+
   .option {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm)
+    gap: var(--spacing-sm);
+
+    &__input {
+      height: var(--spacing-md);
+      width: var(--spacing-md);
+      border: var(--primary-border);
+      transition: var(--transition-theme);
+
+      &:checked {
+        height: var(--spacing-md);
+        width: var(--spacing-md);
+        background-color: var(--primary-contrast-color);
+      }
+
+      &:focus-visible {
+        .focused();
+      }
+    }
   }
-
-  .option__input {
-    height: var(--spacing-md);
-    width: var(--spacing-md);
-
-    border: var(--primary-border);
-
-    transition: var(theme-transition);
-  }
-
-  .option__input:checked {
-    height: var(--spacing-md);
-    width: var(--spacing-md);
-
-    background-color: var(--primary-contrast-color);
-  }
-
-  .option__input:focus-visible {
-    outline: none;  
-    box-shadow:
-      inset 0 0 0 1px var(--primary-color),
-      inset 0 0 0 2px var(--primary-contrast-color);
-  }
+ 
 </style>

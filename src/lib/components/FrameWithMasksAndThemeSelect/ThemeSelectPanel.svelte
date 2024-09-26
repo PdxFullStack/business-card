@@ -19,10 +19,11 @@
 
   .theme-select-panel__selector {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: var(--spacing-md);
+    right: var(--spacing-xs);
 
-    translate: calc(100% - var(--spacing-xs)) calc(-1 * var(--spacing-sm));
+    
+    translate: 100% 0;
     transform: rotate(-90deg);
     transform-origin: left bottom;
   }
