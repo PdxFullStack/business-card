@@ -30,6 +30,7 @@
     flex-direction: column;
 
     align-items: flex-end;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
+    justify-content: center;
   }
 </style>

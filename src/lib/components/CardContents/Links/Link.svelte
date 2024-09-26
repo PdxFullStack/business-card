@@ -34,7 +34,7 @@
   @import '$lib/mixins/focused.less';
 
   .link {
-   
+    font-size: var(--font-size-lg);
   }
 
   .link__anchor {
