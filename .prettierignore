@@ -1,4 +1,7 @@
-# Package Managers
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
+.kit
+build
+node_modules
+.husky
+static
+test-results
+.md

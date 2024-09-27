@@ -1,9 +1,9 @@
-node_modules
-test-results
+/node_modules
+/test-results
 
 .output
 .vercel
-/.svelte-kit
+/.kit
 /build
 
 .DS_Store
